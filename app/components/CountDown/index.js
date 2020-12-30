@@ -11,7 +11,7 @@ const CountDown = () => {
   const [countdownDate, setCountdownDate] = useState(new Date('01/25/2021').getTime());
   const [state, setState] = useState({
     days: 0,
-    hours: 9,
+    hours: 0,
     minutes: 0,
     seconds: 0,
   });

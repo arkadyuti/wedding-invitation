@@ -11,101 +11,179 @@
     cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
 } */
 
+.wedding-main .no-padding {
+  padding: 0;
+}
+
+.wedding-main .countdown-image {
+  height: 420px;
+  width: 100%;
+  background-image: url("../images/wedding_1.jpg");
+  background-size: 110% 88%;
+  background-position: 0 0;
+  opacity: .6;
+}
+
 .logo-wrapper {
-    position: fixed;
-    width: 160px;
-    margin: -40px 0 0 -20px;
+  position: absolute;
+  width: 160px;
+  left: -18px;
+  top: -49px;
 }
 
 .logo-wrapper .logo {
-    display: inline-block;
-    width: 100%;
-    height: auto;
+  display: inline-block;
+  width: 100%;
+  height: auto;
 }
 
 .content {
-    position: absolute;
-    width: 100%;
-    top: 10%;
+  position: absolute;
+  width: 100%;
+  top: 10%;
 }
 
 .content .header {
-    text-align: center;
-    font-size: 8rem;
+  text-align: center;
+  font-size: 8rem;
 }
 
 .background-image {
-    /* position: absolute; */
-    display: inline-block;
-    border-radius: 3px;
-    width: 100vw;
-    height: 100vh;
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-    opacity: 0.5;
-    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
+  /* position: absolute; */
+  display: inline-block;
+  border-radius: 3px;
+  width: 100%;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  opacity: 0.5;
+  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
 }
 
 .Snowflake {
-	display: inline-block;
-	width: 1.5%;
-	color: #FFFAFA;
-	opacity: 0;
-	font-size: 120px;
-	margin: 0;
-	padding: 0;
-	animation: fall 16s linear infinite;
+  display: inline-block;
+  width: 1.5%;
+  color: #FFFAFA;
+  opacity: 0;
+  font-size: 120px;
+  margin: 0;
+  padding: 0;
+  animation: fall 16s linear infinite;
 }
 
-@keyframes fall {
-	0% {
-		opacity: 0;
-	}
-	3% {
-		opacity: 0.9;
-	}
 
-	90% {
-		opacity: 0.9;
-	}
-	100% {
-		transform: translate(0, 97vh);
-		opacity: 0;
-	}
+@keyframes fall {
+  0% {
+    opacity: 0;
+  }
+  3% {
+    opacity: 0.9;
+  }
+
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(0, 97vh);
+    opacity: 0;
+  }
+}
+
+.bottom-text {
+  font-family: "open sans", sans-serif;
+  font-size: 20px;
+  color: #3a4049;
+  text-align: center;
+  font-weight: 700;
+}
+
+.details-text {
+  display: block;
+  text-align: center;
+  font-family: "open sans", sans-serif;
+  color: #3a4049;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.location-cta {
+  margin-top: 12px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.location-cta span {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background-image: url("../images/map-location.png");
+  height: 40px;
+  width: 40px;
+  background-size: 100% 100%;
+  background-position: 0 0;
 }
 
 @media screen and (max-width: 640px) {
-    .content .header {
-        font-weight: bold;
-        font-size: 2rem;
-    }
-    .content {
-        top: 30%;
-    }
-    .section-2 {
-        padding: 0 40px;
-        text-align: center;
-        margin-top: 65px;
-    }
-    .section-2 h4 {
-        width: 70%;
-        margin: 0 auto;
-        color: rgb(214, 187, 110);
-    }
-    .section-2 h1 {
-        font-weight: bold;
-    }
-    .background-image {
-        height: 85vh;
-    }
-    .section-2 p {
-        margin-top: 20px;
-    }
-    .horizontal-rule {
-        border-bottom: 10px solid rgb(58, 64, 73);
-        width: 30px;
-        margin: 20px auto;
-        border-radius: 10px;
-    }
+  .the-wedding {
+    background-color: #d6bb6e;
+    height: 65vh;
+  }
+
+  .content .header {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .content {
+    top: 30%;
+  }
+
+  .section-2 {
+    padding: 0 40px;
+    text-align: center;
+    margin-top: 65px;
+  }
+
+  .section-2 h4 {
+    color: rgb(214, 187, 110);
+  }
+
+  .section-header {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .the-wedding .section-header {
+    font-family: impact, impact-w01-2010, impact-w02-2010, impact-w10-2010, sans-serif;
+    margin-top: 20px;
+    color: #fff;
+    line-height: 2.5rem;
+    letter-spacing: 0.2em;
+  }
+
+  .the-wedding .bottom-text {
+    margin-top: 45px;
+  }
+
+  .the-wedding .details-text {
+    margin-top: 15px;
+  }
+
+  .background-image {
+    height: 85vh;
+  }
+
+  .section-2 p {
+    margin-top: 20px;
+  }
+
+  .horizontal-rule {
+    border-bottom: 10px solid rgb(58, 64, 73);
+    width: 30px;
+    margin: 20px auto;
+    border-radius: 10px;
+  }
 }
