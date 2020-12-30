@@ -23,6 +23,36 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 export default function HomePage() {
   return (
     <div className={'container wedding-main'}>
+      <div class="snowflake1">
+      ❅
+      </div>
+      <div class="snowflake1">
+      ❅
+      </div>
+      <div class="snowflake1">
+      ❆
+      </div>
+      <div class="snowflake1">
+      ❄
+      </div>
+      <div class="snowflake1">
+      ❅
+      </div>
+      <div class="snowflake1">
+      ❆
+      </div>
+      <div class="snowflake1">
+      ❄
+      </div>
+      <div class="snowflake1">
+      ❅
+      </div>
+      <div class="snowflake1">
+      ❆
+      </div>
+      <div class="snowflake1">
+      ❄
+      </div>
       <div className={'row'}>
         <div className={'col-md-12'}>
           <Header/>
@@ -59,6 +89,10 @@ export default function HomePage() {
           <div className="bottom-text">Where</div>
           <span className={"details-text"}>Vrindavan Palace <br/> 79, Hoshangabad Rd, Shri Ram Colony <br/> Bhopal (Madhya Pradesh)</span>
           <a href={"https://goo.gl/maps/NrrNFvX2qA6fTJSFA"} target={"_blank"} className={"location-cta"}><span></span></a>
+        </div>
+        <div className={'col-md-12 no-padding footer'}>
+          <h1 className="section-header">#VishakaHeartsArka</h1>
+          <div className="copyright">© 2021 By Vishaka & Arkadyuti.</div>
         </div>
       </div>
 
