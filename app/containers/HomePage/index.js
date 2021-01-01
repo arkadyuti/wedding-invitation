@@ -5,7 +5,7 @@
  *
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade, EffectCoverflow } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import heart from  '../../images/heart.png';
@@ -30,20 +30,18 @@ import IMG_20191127_002453 from '../../images/us/IMG_20191127_002453.jpg';
 
 SwiperCore.use([Pagination, Scrollbar, A11y, Autoplay, EffectFade, EffectCoverflow]);
 
-let sliderHeight = '444.0625px';
-
-let idealRatio = 588.797/384
-
-let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-// //
-sliderHeight = idealRatio * (width-30) + 'px';
-console.log("hhh",(width-30))
+let idealRatio = 588.797/384;
 
 export default function HomePage() {
-  const [galleryHeight, setGalleryHeight] = useState('599px');
+  const [galleryHeight, setGalleryHeight] = useState('588.797px');
+  const galleryRef = useRef();
 
   useEffect(() => {
-    console.log("did", document.querySelector(".gallery-container").clientWidth)
+    const width = galleryRef.current.clientWidth;
+    const calculated = width * idealRatio;
+    setGalleryHeight(calculated);
+    // console.log('galleryRefgalleryRef', galleryRef.current.clientWidth);
+    // console.log("did", document.querySelector(".gallery-container").clientWidth)
   }, [])
 
   return (
@@ -103,23 +101,23 @@ export default function HomePage() {
           </h1>
           {/* eslint-disable-next-line react/style-prop-object */}
           <div className="gallery-container"
-               style={{height:sliderHeight}}
+              ref={galleryRef}
+               style={{height:galleryHeight}}
           >
-            <GridOne/>
-            {/*<Swiper*/}
-            {/*  style={{ height: sliderHeight }}*/}
-            {/*  spaceBetween={0}*/}
-            {/*  slidesPerView={1}*/}
-            {/*  loop*/}
-            {/*  // autoplay = {{*/}
-            {/*  //   delay: 5000,*/}
-            {/*  //   disableOnInteraction: false,*/}
-            {/*  // }}*/}
-            {/*>*/}
-            {/*  <SwiperSlide><GridOne/></SwiperSlide>*/}
-            {/*  <SwiperSlide><GridTwo/></SwiperSlide>*/}
-            {/*  <SwiperSlide><GridThree/></SwiperSlide>*/}
-            {/*</Swiper>*/}
+            <Swiper
+              style={{height:galleryHeight}}
+              spaceBetween={0}
+              slidesPerView={1}
+              loop
+              autoplay = {{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
+            >
+              <SwiperSlide><GridOne /></SwiperSlide>
+              <SwiperSlide><GridTwo /></SwiperSlide>
+              <SwiperSlide><GridThree /></SwiperSlide>
+            </Swiper>
 
           </div>
         </div>
