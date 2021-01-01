@@ -14,8 +14,6 @@ import '../../css/styles.css';
 import '../../css/swiper.css';
 
 import Header from '../../components/Header';
-import Slide1 from '../../components/Slide1';
-import Slider2 from '../../components/Slider2';
 import CountDown from '../../components/CountDown';
 import A28I2408 from '../../images/us/A28I2408.jpg';
 import IMG_20181117_001957 from '../../images/us/IMG_20181117_001957.jpg';
@@ -28,9 +26,9 @@ import IMG_20181231_195819 from '../../images/us/IMG_20181231_195819.jpg';
 import IMG_20191231_204426 from '../../images/us/IMG_20191231_204426.jpg';
 import IMG_20191127_002453 from '../../images/us/IMG_20191127_002453.jpg';
 
-SwiperCore.use([Pagination, Scrollbar, A11y, Autoplay, EffectFade, EffectCoverflow]);
+SwiperCore.use([ Scrollbar, A11y, Autoplay, EffectFade, EffectCoverflow]);
 
-let idealRatio = 588.797/384;
+const idealRatio = 586 / 384;
 
 export default function HomePage() {
   const [galleryHeight, setGalleryHeight] = useState('588.797px');
@@ -40,9 +38,7 @@ export default function HomePage() {
     const width = galleryRef.current.clientWidth;
     const calculated = width * idealRatio;
     setGalleryHeight(calculated);
-    // console.log('galleryRefgalleryRef', galleryRef.current.clientWidth);
-    // console.log("did", document.querySelector(".gallery-container").clientWidth)
-  }, [])
+  }, []);
 
   return (
     <div className="container wedding-main">
@@ -101,22 +97,22 @@ export default function HomePage() {
           </h1>
           {/* eslint-disable-next-line react/style-prop-object */}
           <div className="gallery-container"
-              ref={galleryRef}
-               style={{height:galleryHeight}}
+               ref={galleryRef}
+               style={{ height: galleryHeight }}
           >
             <Swiper
-              style={{height:galleryHeight}}
+              style={{ height: galleryHeight }}
               spaceBetween={0}
               slidesPerView={1}
               loop
-              autoplay = {{
+              autoplay={{
                 delay: 5000,
                 disableOnInteraction: false,
               }}
             >
-              <SwiperSlide><GridOne /></SwiperSlide>
-              <SwiperSlide><GridTwo /></SwiperSlide>
-              <SwiperSlide><GridThree /></SwiperSlide>
+              <SwiperSlide><GridOne/></SwiperSlide>
+              <SwiperSlide><GridTwo/></SwiperSlide>
+              <SwiperSlide><GridThree/></SwiperSlide>
             </Swiper>
 
           </div>
