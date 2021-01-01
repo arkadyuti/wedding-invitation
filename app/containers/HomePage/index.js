@@ -5,7 +5,7 @@
  *
  */
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade, EffectCoverflow } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import heart from  '../../images/heart.png';
@@ -28,9 +28,24 @@ import IMG_20181231_195819 from '../../images/us/IMG_20181231_195819.jpg';
 import IMG_20191231_204426 from '../../images/us/IMG_20191231_204426.jpg';
 import IMG_20191127_002453 from '../../images/us/IMG_20191127_002453.jpg';
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade, EffectCoverflow]);
+SwiperCore.use([Pagination, Scrollbar, A11y, Autoplay, EffectFade, EffectCoverflow]);
+
+let sliderHeight = '444.0625px';
+
+let idealRatio = 588.797/384
+
+let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+// //
+sliderHeight = idealRatio * (width-30) + 'px';
+console.log("hhh",(width-30))
 
 export default function HomePage() {
+  const [galleryHeight, setGalleryHeight] = useState('599px');
+
+  useEffect(() => {
+    console.log("did", document.querySelector(".gallery-container").clientWidth)
+  }, [])
+
   return (
     <div className="container wedding-main">
       <div className="snowflake1">❅</div>
@@ -86,20 +101,25 @@ export default function HomePage() {
           <h1 className="section-header w3-container w3-monospace">
             MOMENTS
           </h1>
-          <div className="gallery-container">
-            <Swiper
-              spaceBetween={0}
-              slidesPerView={1}
-              loop
-              // autoplay = {{
-              //   delay: 5000,
-              //   disableOnInteraction: false,
-              // }}
-            >
-              <SwiperSlide><GridOne /></SwiperSlide>
-              <SwiperSlide><GridTwo /></SwiperSlide>
-              <SwiperSlide><GridThree /></SwiperSlide>
-            </Swiper>
+          {/* eslint-disable-next-line react/style-prop-object */}
+          <div className="gallery-container"
+               style={{height:sliderHeight}}
+          >
+            <GridOne/>
+            {/*<Swiper*/}
+            {/*  style={{ height: sliderHeight }}*/}
+            {/*  spaceBetween={0}*/}
+            {/*  slidesPerView={1}*/}
+            {/*  loop*/}
+            {/*  // autoplay = {{*/}
+            {/*  //   delay: 5000,*/}
+            {/*  //   disableOnInteraction: false,*/}
+            {/*  // }}*/}
+            {/*>*/}
+            {/*  <SwiperSlide><GridOne/></SwiperSlide>*/}
+            {/*  <SwiperSlide><GridTwo/></SwiperSlide>*/}
+            {/*  <SwiperSlide><GridThree/></SwiperSlide>*/}
+            {/*</Swiper>*/}
 
           </div>
         </div>
@@ -145,6 +165,7 @@ function GridThree() {
     </div>
   );
 }
+
 function GridOne() {
   return (
     <div className="gallery-wrapper grid-one">
@@ -154,12 +175,13 @@ function GridOne() {
     </div>
   );
 }
+
 function GridTwo() {
   return (
     <div className="gallery-wrapper grid-two">
       <div className="top-left"><img src={IMG_20200214_222333}/></div>
       <div className="top-right"><img src={IMG_20181117_001957}/></div>
       <div className="full-width"><img src={IMG_20200214_194921}/></div>
-      </div>
+    </div>
   );
 }
