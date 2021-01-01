@@ -91,10 +91,10 @@ export default function HomePage() {
               spaceBetween={0}
               slidesPerView={1}
               loop
-              autoplay = {{
-                delay: 5000,
-                disableOnInteraction: false,
-              }}
+              // autoplay = {{
+              //   delay: 5000,
+              //   disableOnInteraction: false,
+              // }}
             >
               <SwiperSlide><GridOne /></SwiperSlide>
               <SwiperSlide><GridTwo /></SwiperSlide>
@@ -160,6 +160,6 @@ function GridTwo() {
       <div className="top-left"><img src={IMG_20200214_222333}/></div>
       <div className="top-right"><img src={IMG_20181117_001957}/></div>
       <div className="full-width"><img src={IMG_20200214_194921}/></div>
-    </div>
+      </div>
   );
 }

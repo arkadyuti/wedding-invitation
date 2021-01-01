@@ -394,3 +394,10 @@
     border-radius: 10px;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .photo-gallery .gallery-container,
+  .gallery-container .swiper-container {
+    height: 502px;
+  }
+}
