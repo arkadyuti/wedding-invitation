@@ -12,6 +12,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import '../../css/styles.css';
 import '../../css/swiper.css';
+
 import Header from '../../components/Header';
 import Slide1 from '../../components/Slide1';
 import Slider2 from '../../components/Slider2';
@@ -58,10 +59,12 @@ export default function HomePage() {
               WE ARE GETTING MARRIED (:
             </h4>
             <p>
-              I'm a paragraph. Click here to add your own text and edit me. It’s
+            <b>“Love comes from the most unexpected places.“</b><br />
+              Please join us in our happiness as we mark the beginning of our journey into a life-long bond and commitment.
+              {/* I'm a paragraph. Click here to add your own text and edit me. It’s
               easy. Just click “Edit Text” or double click me to add your own
               content and make changes to the font. I’m a great place for you to
-              tell a story and let your users know a little more about you.
+              tell a story and let your users know a little more about you. */}
             </p>
             <div className="horizontal-rule" />
             <div className="bottom-text">XOXO</div>
