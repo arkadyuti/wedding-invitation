@@ -112,6 +112,7 @@
   display: block;
   text-align: center;
   text-decoration: none;
+  margin-bottom: 40px;
 }
 
 .location-cta span {
@@ -139,8 +140,9 @@
   margin-bottom: 20px;
   margin-top: 20px;
   background-color: #2d3436;
-   background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
 }
+
 .photo-gallery .gallery-container {
   position: relative;
   background: #000;
@@ -150,204 +152,260 @@
   /* padding-left: 15px;
   padding-right: 15px; */
 }
+
 .photo-gallery .section-header {
   color: #fff;
   background-color: #000000;
   background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
 }
-.photo-gallery .gallery-container .top-right{
+
+.photo-gallery .gallery-container .top-right {
   width: 50%;
   position: absolute;
   right: 0;
   top: 0;
 }
-.photo-gallery .gallery-container .top-left{
+
+.photo-gallery .gallery-container .top-left {
   width: 50%;
   position: absolute;
   left: 0;
   top: 0;
 }
-.photo-gallery .gallery-container .full-width{
+
+.photo-gallery .gallery-container .full-width {
   width: 100%;
   position: absolute;
   z-index: 3;
 }
-.photo-gallery .gallery-container .bottom-left{
+
+.photo-gallery .gallery-container .bottom-left {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 50%;
 }
-.photo-gallery .gallery-container .bottom-right{
+
+.photo-gallery .gallery-container .bottom-right {
   position: absolute;
   right: 0;
   bottom: 0;
   width: 50%;
 }
-.photo-gallery .gallery-container .grid-one .bottom-left{
+
+.photo-gallery .gallery-container .grid-one .bottom-left {
   bottom: -24px;
 }
-.photo-gallery .gallery-container .grid-one .bottom-right{
+
+.photo-gallery .gallery-container .grid-one .bottom-right {
   bottom: -38px;
 }
+
 .photo-gallery .gallery-container .grid-two .full-width {
   bottom: 0;
   width: 120%;
 }
+
 .photo-gallery .gallery-container .grid-two .top-right {
   right: -31px;
   width: 65%;
   z-index: 1;
 }
+
 .photo-gallery .gallery-container .grid-two .top-left {
   top: -87px;
   z-index: 2;
 }
+
 .photo-gallery .gallery-container .grid-three .full-height.one {
   left: 0;
   top: -30px;
   z-index: 2;
 }
+
 .photo-gallery .gallery-container .grid-three .full-height.two {
   right: -60px;
   bottom: -120px;
   width: 70%;
   z-index: 1;
 }
+
 .photo-gallery .gallery-container .grid-three .top-right {
   width: 59%;
   right: -20px;
 }
+
 .photo-gallery .gallery-container .grid-three .bottom-left {
   bottom: -44px;
   z-index: 5;
 }
+
 .photo-gallery .gallery-container .full-height {
   width: 50%;
   position: absolute;
 }
-.photo-gallery .gallery-container img{
+
+.photo-gallery .gallery-container img {
   width: 100%;
 }
 
 .footer {
-    margin: 45px 0;
-    text-align: center;
+  margin: 45px 0;
+  text-align: center;
 }
 
 .footer .section-header {
-    letter-spacing: 0.1em;
-    font-size: 21px;
-    font-family: "open sans", sans-serif;
-    font-weight: 700;
-    color: rgb(58, 64, 73);
+  letter-spacing: 0.1em;
+  font-size: 21px;
+  font-family: "open sans", sans-serif;
+  font-weight: 700;
+  color: rgb(58, 64, 73);
 }
 
 .footer .copyright {
-    font-family: "open sans", sans-serif;
-    font-size: 15px;
-    color: rgb(58, 64, 73);
+  font-family: "open sans", sans-serif;
+  font-size: 15px;
+  color: rgb(58, 64, 73);
 }
 
 .snowflake1 {
-    color: #fff;
-    font-size: 1em;
-    font-family: Arial;
-    text-shadow: 0 0 1px #000;
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial;
+  text-shadow: 0 0 1px #000;
 }
 
 @keyframes snowflakes-fall {
-    0% {
-        top:-10%;
-    }
-    100% {
-        top:100%;
-    }
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
+  }
 }
+
 @keyframes snowflakes-shake {
-    0% {
-        transform:translateX(0px);
-    }
-    50% {
-        transform:translateX(80px);
-    }
-    100% {
-        transform:translateX(0px);
-    }
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(80px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
+
 .snowflake1 {
-    position:fixed;
-    top:-10%;
-    z-index:9999;
-    user-select:none;
-    cursor:default;
-    animation-name:snowflakes-fall,snowflakes-shake;
-    animation-duration:10s,3s;
-    animation-timing-function:linear,ease-in-out;
-    animation-iteration-count:infinite,infinite;
-    animation-play-state:running,running
+  position: fixed;
+  top: -10%;
+  z-index: 9999;
+  user-select: none;
+  cursor: default;
+  animation-name: snowflakes-fall, snowflakes-shake;
+  animation-duration: 10s, 3s;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-play-state: running, running
 }
+
 .snowflake1:nth-of-type(0) {
-    left:1%;
-    animation-delay:0s,0s
+  left: 1%;
+  animation-delay: 0s, 0s
 }
+
 .snowflake1:nth-of-type(1) {
-    left:10%;
-    animation-delay:1s,1s;
+  left: 10%;
+  animation-delay: 1s, 1s;
 }
+
 .snowflake1:nth-of-type(2) {
-    left:20%;
-    animation-delay:6s,.5s
+  left: 20%;
+  animation-delay: 6s, .5s
 }
+
 .snowflake1:nth-of-type(3) {
-    left:30%;
-    animation-delay:4s,2s
+  left: 30%;
+  animation-delay: 4s, 2s
 }
+
 .snowflake1:nth-of-type(4) {
-    left:40%;
-    animation-delay:2s,2s;
+  left: 40%;
+  animation-delay: 2s, 2s;
 }
+
 .snowflake1:nth-of-type(5) {
-    left:50%;
-    animation-delay:8s,3s;
+  left: 50%;
+  animation-delay: 8s, 3s;
 }
+
 .snowflake1:nth-of-type(6) {
-    left:60%;
-    animation-delay:6s,2s;
+  left: 60%;
+  animation-delay: 6s, 2s;
 }
+
 .snowflake1:nth-of-type(7) {
-    left:70%;
-    animation-delay:2.5s,1s
+  left: 70%;
+  animation-delay: 2.5s, 1s
 }
+
 .snowflake1:nth-of-type(8) {
-    left:80%;
-    animation-delay:1s,0s;
+  left: 80%;
+  animation-delay: 1s, 0s;
 }
+
 .snowflake1:nth-of-type(9) {
-    left:90%;
-    animation-delay:3s,1.5s;
+  left: 90%;
+  animation-delay: 3s, 1.5s;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-@media screen and (max-width: 640px) {
-  .the-wedding {
-    /* background-color: #d6bb6e; */
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-    height: 65vh;
-  }
+.header-2 {
+  color: rgb(214, 187, 110);
+}
+.section-2 {
+  text-align: center;
+}
+
+.horizontal-rule {
+  border-bottom: 10px solid rgb(58, 64, 73);
+  width: 30px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.the-wedding .section-header {
+  font-family: impact, impact-w01-2010, impact-w02-2010, impact-w10-2010, sans-serif;
+  margin-top: 20px;
+  color: #fff;
+  line-height: 2.5rem;
+  letter-spacing: 0.2em;
+}
+
+.section-header {
+  text-align: center;
+  font-weight: bold;
+}
+
+.the-wedding {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: auto;
+}
+
+@media screen and (max-width: 767px) {
 
   .content .header {
     font-weight: bold;
@@ -360,26 +418,8 @@
 
   .section-2 {
     padding: 0 40px;
-    text-align: center;
-    /* margin-top: 65px; */
   }
 
-  .section-2 h4 {
-    color: rgb(214, 187, 110);
-  }
-
-  .section-header {
-    text-align: center;
-    font-weight: bold;
-  }
-
-  .the-wedding .section-header {
-    font-family: impact, impact-w01-2010, impact-w02-2010, impact-w10-2010, sans-serif;
-    margin-top: 20px;
-    color: #fff;
-    line-height: 2.5rem;
-    letter-spacing: 0.2em;
-  }
 
   .the-wedding .bottom-text {
     margin-top: 45px;
@@ -393,27 +433,35 @@
     height: 85vh;
   }
 
-  .section-2 p {
+  .para-content {
     margin-top: 20px;
   }
 
-  .horizontal-rule {
-    border-bottom: 10px solid rgb(58, 64, 73);
-    width: 30px;
-    margin: 20px auto;
-    border-radius: 10px;
-  }
 }
 
-@media screen and (max-width: 375px) {
-  .photo-gallery .gallery-container,
-  .gallery-container .swiper-container {
-    height: 502px;
+@media screen and (min-width: 768px) {
+  .wedding-main .countdown-image {
+    height: 483px;
+    background-image: url("../images/wedding_1.jpg");
+    background-size: 100% 124%;
   }
-}
-@media screen and (max-width: 375px) {
-  .photo-gallery .gallery-container,
-  .gallery-container .swiper-container {
-    height: 438px;
+  .content .header {
+    font-size: 4.5rem;
+  }
+  .content {
+    top: 23%;
+  }
+  .para-content {
+    display: block;
+    width: 50%;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    margin: 0 auto;
+  }
+  .header-2 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    font-family: Arial,Helvetica,sans-serif;
   }
 }

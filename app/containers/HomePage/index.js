@@ -73,7 +73,7 @@ export default function HomePage() {
             <h4 className="header-2 w3-container w3-monospace">
               WE ARE GETTING MARRIED (:
             </h4>
-            <p>
+            <p className="para-content">
               <b>“Love comes from the most unexpected places.“</b><br/>
               Please join us in our happiness as we mark the beginning of our journey into a life-long bond and
               commitment.
