@@ -29,3 +29,9 @@
         font-size: 38px !important;
     }
 }
+
+@media screen and (max-width: 320px) {
+  .time {
+    font-size: 32px !important;
+  }
+}
