@@ -6,9 +6,8 @@
  */
 
 import React, { useState, useEffect, useRef } from 'react';
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade, EffectCoverflow } from 'swiper';
+import SwiperCore, {  Scrollbar, A11y, Autoplay, EffectFade, EffectCoverflow } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// import heart from  '../../images/heart.png';
 
 import '../../css/styles.css';
 import '../../css/swiper.css';
@@ -46,8 +45,8 @@ export default function HomePage() {
   useEffect(() => {
     const width = galleryRef.current.clientWidth;
     let calculated = width * idealRatio;
-    if (width < 400) {
-      calculated -= 5;
+    if (width < 375) {
+      calculated -= 20;
     }
     setGalleryHeight(isMobile ? calculated : 562);
   }, []);
@@ -89,10 +88,6 @@ export default function HomePage() {
               <b className={'bold-text'}>“Love comes from the most unexpected places.“</b><br/>
               Please join us in our happiness as we mark the beginning of our journey into a life-long bond and
               commitment.
-              {/* I'm a paragraph. Click here to add your own text and edit me. It’s
-              easy. Just click “Edit Text” or double click me to add your own
-              content and make changes to the font. I’m a great place for you to
-              tell a story and let your users know a little more about you. */}
             </p>
             <div className="horizontal-rule"/>
             <div className="bottom-text">XOXO</div>
