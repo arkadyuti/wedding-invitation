@@ -457,11 +457,48 @@
     font-size: 16px;
     letter-spacing: 0.02em;
     margin: 0 auto;
+    margin-top: 35px;
+  }
+  .bold-text {
+    display: block;
+    margin-bottom: -10px;
   }
   .header-2 {
+    margin-top: 50px;
     font-size: 20px;
     font-weight: 700;
     letter-spacing: .3rem;
     font-family: Arial,Helvetica,sans-serif;
+  }
+  .photo-gallery {
+    margin-top: 50px;
+  }
+  .wedding-main .no-padding.the-wedding{
+    padding: 30px;
+  }
+  .wedding-main .no-padding{
+    margin-top: 70px;
+  }
+  .desktop-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 70px;
+  }
+  .desktop-wrapper .vertical-line {
+    height: 130px;
+    width: 2px;
+    background: #000;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+  .location-cta {
+    margin-top: 60px;
+  }
+  .bottom-text {
+    margin-bottom: 30px;
   }
 }
