@@ -43,7 +43,6 @@ const mobileCheck = function() {
 };
 
 const isMobile = mobileCheck();
-console.log("isMobile:",isMobile)
 
 export default function HomePage() {
   const [galleryHeight, setGalleryHeight] = useState('588.797px');
@@ -118,10 +117,10 @@ export default function HomePage() {
               spaceBetween={0}
               slidesPerView={isMobile ? 1 : 3}
               loop
-              // autoplay={{
-              //   delay: 5000,
-              //   disableOnInteraction: false,
-              // }}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
             >
               <SwiperSlide><GridOne/></SwiperSlide>
               <SwiperSlide><GridTwo/></SwiperSlide>
