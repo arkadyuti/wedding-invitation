@@ -24,6 +24,8 @@ import IMG_20190822_000843 from '../../images/us/IMG_20190822_000843.jpg';
 import IMG_20181231_195819 from '../../images/us/IMG_20181231_195819.jpg';
 import IMG_20191231_204426 from '../../images/us/IMG_20191231_204426.jpg';
 import IMG_20191127_002453 from '../../images/us/IMG_20191127_002453.jpg';
+import mask from '../../images/mask.jpg';
+import gify from '../../images/giffy.gif';
 
 SwiperCore.use([Scrollbar, A11y, Autoplay, EffectFade, EffectCoverflow]);
 
@@ -147,6 +149,10 @@ export default function HomePage() {
           >
             <span></span>
           </a>
+        </div>
+        <div className="mask-container"> <img src={mask} /></div>
+        <div className="gif-container">
+          <img src={gify} />
         </div>
         <div className="col-md-12 no-padding footer">
           <h1 className="section-header">#VishakaHeartsArka</h1>
