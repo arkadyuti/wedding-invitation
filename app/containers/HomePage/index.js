@@ -74,9 +74,6 @@ export default function HomePage() {
         </div>
         <div className="col-md-12 no-padding">
           <div className="section-2">
-            <h1 className="section-header w3-container w3-monospace">
-              OUR STORY
-            </h1>
             <h4 className="header-2 w3-container w3-monospace">
               WE ARE GETTING MARRIED (:
             </h4>
