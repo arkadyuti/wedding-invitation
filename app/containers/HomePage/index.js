@@ -155,7 +155,7 @@ export default function HomePage() {
           <img src={gify} />
         </div>
         <div className="col-md-12 no-padding footer">
-          <h1 className="section-header">#VishakaHeartsArka</h1>
+          {/* <h1 className="section-header">#VishakaHeartsArka</h1> */}
           <div className="copyright">© 2021 By Arkadyuti & Vishaka.</div>
         </div>
       </div>
