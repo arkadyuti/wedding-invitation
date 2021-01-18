@@ -5,10 +5,19 @@
  */
 
 import React, { memo, useEffect, useState } from 'react';
-import "../../css/countdown.css";
+import '../../css/countdown.css';
+
+const marriageDate = new Date('2021-01-25T00:00:00.000+05:30').getTime();
+let countdownFlag = true;
+marriageDate.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
 
 const CountDown = () => {
-  const [countdownDate, setCountdownDate] = useState(new Date('01/25/2021').getTime());
+  const currentDateFull = new Date();
+  const currentDate = currentDateFull.setHours(0, 0, 0, 0);
+  if (currentDate >= marriageDate) {
+    countdownFlag = false;
+  }
+  const [countdownDate, setCountdownDate] = useState(marriageDate);
   const [state, setState] = useState({
     days: 0,
     hours: 0,
@@ -49,6 +58,9 @@ const CountDown = () => {
       setState({ days: days, hours: hours, minutes, seconds });
     }
   };
+  if (!countdownFlag) {
+    return null;
+  }
 
   return (
     <div>
